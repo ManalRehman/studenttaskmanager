@@ -1,3 +1,3 @@
 # studenttaskmanager
 A Python-based Student Task Manager developed using Git and GitHub for version control.
-Project status: In Development
+Project status: Completed
