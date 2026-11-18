@@ -66,6 +66,9 @@ def delete_task():
 
     try:
         task_id = int(input("Enter task ID to delete: "))
+        if task_id <= 0:
+            print("Task ID must be a positive number!")
+            return
 
         for task in tasks:
             if task["id"] == task_id:
