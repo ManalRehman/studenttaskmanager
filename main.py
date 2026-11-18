@@ -17,6 +17,10 @@ def add_task():
         print("Task title cannot be empty!")
         return
 
+    if len(title) < 3:
+        print("Task title must contain at least 3 characters!")
+        return
+    
     task = {
         "id": next_id,
         "title": title,
