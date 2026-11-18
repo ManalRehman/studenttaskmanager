@@ -38,6 +38,47 @@ def view_tasks():
         print("----------------------")
 
 
+def complete_task():
+    view_tasks()
+
+    if not tasks:
+        return
+
+    try:
+        task_id = int(input("Enter task ID to complete: "))
+
+        for task in tasks:
+            if task["id"] == task_id:
+                task["completed"] = True
+                print("Task marked as completed!")
+                return
+
+        print("Invalid task ID!")
+
+    except ValueError:
+        print("Please enter a valid number!")
+
+def delete_task():
+    view_tasks()
+
+    if not tasks:
+        return
+
+    try:
+        task_id = int(input("Enter task ID to delete: "))
+
+        for task in tasks:
+            if task["id"] == task_id:
+                tasks.remove(task)
+                print("Task deleted successfully!")
+                return
+
+        print("Invalid task ID!")
+
+    except ValueError:
+        print("Please enter a valid number!")
+
+
 def main():
     while True:
         print("\n" + "=" * 40)
@@ -45,7 +86,9 @@ def main():
         print("=" * 40)
         print("1. Add Task")
         print("2. View Tasks")
-        print("3. Exit")
+        print("3. Complete Task")
+        print("4. Delete Task")
+        print("5. Exit")
 
         choice = input("Enter your choice: ")
 
@@ -54,8 +97,14 @@ def main():
 
         elif choice == "2":
             view_tasks()
-
+        
         elif choice == "3":
+            complete_task()
+
+        elif choice == "4":
+            delete_task()
+
+        elif choice == "5":
             print("Thank you for using Student Task Manager!")
             break
 
