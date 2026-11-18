@@ -1,9 +1,6 @@
 
 # Student Task Manager
 
-from matplotlib.pyplot import title
-
-
 tasks = []
 next_id = 1
 
