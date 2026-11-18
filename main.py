@@ -40,7 +40,9 @@ def view_tasks():
 
 def main():
     while True:
-        print("\n===== STUDENT TASK MANAGER =====")
+        print("\n" + "=" * 40)
+        print("       STUDENT TASK MANAGER")
+        print("=" * 40)
         print("1. Add Task")
         print("2. View Tasks")
         print("3. Exit")
